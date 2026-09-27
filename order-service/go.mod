@@ -3,11 +3,14 @@ module order-service
 go 1.25.0
 
 require (
+	github.com/google/uuid v1.6.0
 	github.com/goravel/framework v1.18.0
 	github.com/goravel/gin v1.18.0
 	github.com/goravel/openai v1.18.0
 	github.com/goravel/postgres v1.18.0
+	github.com/rabbitmq/amqp091-go v1.15.0
 	github.com/stretchr/testify v1.11.1
+	gorm.io/gorm v1.31.2
 )
 
 require (
@@ -60,7 +63,6 @@ require (
 	github.com/goccy/go-yaml v1.19.2 // indirect
 	github.com/goforj/godump v1.9.1 // indirect
 	github.com/golang-jwt/jwt/v5 v5.3.1 // indirect
-	github.com/google/uuid v1.6.0 // indirect
 	github.com/gookit/color v1.6.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.29.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
@@ -92,7 +94,6 @@ require (
 	github.com/pterm/pterm v0.12.83 // indirect
 	github.com/quic-go/qpack v0.6.0 // indirect
 	github.com/quic-go/quic-go v0.59.0 // indirect
-	github.com/rabbitmq/amqp091-go v1.15.0 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
 	github.com/robfig/cron/v3 v3.0.1 // indirect
 	github.com/rotisserie/eris v0.5.4 // indirect
@@ -156,6 +157,5 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 	gorm.io/driver/postgres v1.6.0 // indirect
-	gorm.io/gorm v1.31.2 // indirect
 	gorm.io/plugin/dbresolver v1.6.2 // indirect
 )

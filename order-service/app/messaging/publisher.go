@@ -4,13 +4,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"order-service/app/facades"
 	"sync"
 	"time"
 
 	"github.com/google/uuid"
 	amqp "github.com/rabbitmq/amqp091-go"
-
-	"order-service/app/facades"
 )
 
 const ExchangeName = "order_events"
@@ -90,10 +89,6 @@ var (
 	orderEventPublisherOnce sync.Once
 )
 
-// OrderPublisher returns the shared publisher instance used across the app,
-// connecting to RabbitMQ lazily on first use. It must not be called from a
-// package init() — the app (facades.App()) is only ready once bootstrap.Boot()
-// has run inside main().
 func OrderPublisher() *Publisher {
 	orderEventPublisherOnce.Do(func() {
 		p, err := NewPublisher()
